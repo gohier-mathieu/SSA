@@ -1,0 +1,23 @@
+.landing-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Utilisez 100% au lieu de 100vw pour éviter les problèmes liés aux barres de défilement */
+    height: 100%; /* Même principe pour la hauteur */
+    z-index: 0; /* Le canvas est en arrière-plan */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(43, 41, 41, 1);
+    overflow: hidden; /* Empêche le scrolling inutile */
+}
+
+/* Appliquer le style uniquement au canvas dans Landing */
+.landing-canvas canvas {
+    display: block; /* Empêche l'espacement sous le canvas par défaut */
+    width: 100%; /* Ajustement pour correspondre à la largeur de l'écran */
+    height: 100%; /* Ajustement pour correspondre à la hauteur de l'écran */
+}

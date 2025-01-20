@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgb(51, 51, 51, 0); /* Couleur de fond */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Lorsque l'on est sur la page /home, centrer le logo */
+.navbar-logo.centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-cross {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: gold;
+}
+
+.navbar-cross:hover {
+  color: #ff0000; /* Couleur au survol */
+}

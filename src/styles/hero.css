@@ -1,0 +1,30 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    height: auto; /* Ne fixe pas la hauteur, elle s'ajustera automatiquement */
+  }
+  
+  .article img {
+    width: 100%; /* L'image prendra toute la largeur disponible */
+    height: auto; /* Hauteur ajustée automatiquement pour maintenir le ratio */
+    max-width: 350px; /* Limite la largeur maximale de l'image */
+    object-fit: contain; /* L'image s'ajuste dans son conteneur sans être coupée */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .article img:hover {
+    transform: scale(1.05); /* Zoom sur l'image au survol */
+  }
+  
+  .article h3 {
+    font-size: 1.5rem; /* Taille du texte */
+    margin-bottom: 1rem;
+    text-align: center;
+    max-width: 350px; /* La largeur maximale du texte correspond à celle de l'image */
+    word-wrap: break-word; /* Permet de couper les mots si nécessaire */
+  }
+  

@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(43, 41, 41, 1);
+  overflow: hidden; /* Empêche le scrolling inutile */
+}
+
+canvas.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Canvas couvre toute la largeur */
+  height: 100vh; /* Canvas couvre toute la hauteur */
+  z-index: 0; /* Le canvas est en arrière-plan */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(43, 41, 41);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Navbar au-dessus du canvas */
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: white; /* Assurez la lisibilité sur un canvas sombre */
+}
+
+p {
+  text-align: center;
+  color: white;
+}
