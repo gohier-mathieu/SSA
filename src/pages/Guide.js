@@ -6,7 +6,8 @@ import './../styles/guide.css';
 function Guide() {
   // Exemple de données pour les articles
   const articles = [
-    { id: 1, title: 'Nombre de piéces de drones dont vous avez besoin pour chaque palier de drone', imageUrl: 'img/divers/drone.png' },
+    { id: 1, title: 'Tableau du niveau des batiments à avoir pour monter votre QG', imageUrl: 'img/divers/qg.png' },
+    { id: 2, title: 'Nombre de piéces de drones dont vous avez besoin pour chaque palier de drone', imageUrl: 'img/divers/drone.png' },
     { id: 3, title: 'Ressources nécessaires pour mettre des étoiles sur vos équipements lvl40 (à faire si votre team est full équipements oranges) ', imageUrl: 'img/divers/etoiles.png' },
   ];
 

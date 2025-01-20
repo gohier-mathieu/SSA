@@ -39,13 +39,13 @@ function Cascade() {
         />
 
         {/* Texte explicatif */}
-        <p style={{ lineHeight: '1.6', textAlign: 'justify', marginBottom: '1rem' }}>
+        <p style={{ lineHeight: '1.6', textAlign: 'justify', marginBottom: '1rem', color:'white' }}>
           La cascade est <strong>LA technique ultime</strong> et simple pour augmenter <strong>RAPIDEMENT</strong> vos
           deux Puissances <strong>EN MÊME TEMPS</strong>. Le système est simple :
         </p>
 
         {/* Liste des étapes */}
-        <ol style={{ lineHeight: '1.8', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
+        <ol style={{ lineHeight: '1.8', marginBottom: '1rem', paddingLeft: '1.5rem' , color:'white'}}>
           <li>
             <strong>On monte toujours notre Caserne #1</strong> à son niveau maximum (celui de notre QG).
           </li>
