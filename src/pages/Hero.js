@@ -10,6 +10,7 @@ function Hero() {
     { id: 2, title: 'Missile', imageUrl: 'img/hero/missile.png' },
     { id: 3, title: 'Avion', imageUrl: 'img/hero/avion.png' },
     { id: 4, title: "Privilégiez les teams completes dans une catégories pour un maximum de dégâts", imageUrl: 'img/hero/rapport.png' },
+    { id: 5, title: 'Nombre de fragments nécessaires pour chaque partie des étoiles du héro', imageUrl: 'img/hero/etoiles.png' },
   ];
 
   return (
