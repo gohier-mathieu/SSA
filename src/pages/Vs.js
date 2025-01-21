@@ -102,6 +102,10 @@ const App = () => {
         img: "img/thursday/Capture d'écran 2025-01-13 105723.png",
         text: "Utilisez vos fragments héros.",
       },
+      {
+        img: "img/thursday/Capture d'écran 2025-01-21 141252.png",
+        text: "Utilisez ces coffres pour recruter des heros ou améliorer ceux que vous avez.",
+      },
     ],
     friday: [
       {
