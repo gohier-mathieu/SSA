@@ -1,112 +1,126 @@
+
+
+
 /* Styles de base des boutons */
 .flame {
-    width: 125px; /* Taille carrée */
-    height: 125px;
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    border-radius: 40px;
-    border: 5px solid transparent;
-    background-color: gold; /* Fond doré */
-    background-image: linear-gradient(black, gold), radial-gradient(circle, gold, black); /* Bordure dégradée or → noir */
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Halo initial doré */
-    overflow: hidden;
-  }
-  
-  /* Ajout des flammes (effet d'animation) */
-  .flame::before {
-    content: '';
-    position: absolute;
-    top: -20%;
-    left: -20%;
-    width: 140%;
-    height: 140%;
-    background: radial-gradient(circle, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 0.5), transparent);
-    border-radius: 50%; /* Effet de halo rond */
-    filter: blur(10px);
-    animation: flame-effect 3s infinite ease-in-out;
-    z-index: -1; /* Derrière le bouton */
-    box-shadow: 0 0 15px 5px rgba(255, 69, 0, 01);
-    overflow: hidden;
-  }
-  
-  /* Animations spécifiques */
-  .flame1 {
-    animation: flame1 3s infinite ease-in-out;
-  }
-  
-  .flame2 {
-    animation: flame2 4s infinite ease-in-out;
-  }
-  
-  .flame3 {
-    animation: flame3 3.5s infinite ease-in-out;
-  }
-  
-  .flame4 {
-    animation: flame4 5s infinite ease-in-out;
-  }
-  .flame5 {
-    animation: flame4 4.5s infinite ease-in-out;
-  }
-  .flame6 {
-    animation: flame4 3.5s infinite ease-in-out;
-  }
-  
-  /* Définitions des animations */
-  @keyframes flame1 {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.6);
-    }
-    50% {
-      box-shadow: 0 0 30px rgba(255, 99, 71, 1), 0 0 40px rgba(255, 69, 0, 0.9);
-    }
-  }
-  
-  @keyframes flame2 {
-    0%, 100% {
-      box-shadow: 0 0 25px rgba(255, 140, 0, 0.8), 0 0 35px rgba(255, 69, 0, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 35px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.9);
-    }
-  }
-  
-  @keyframes flame3 {
-    0%, 100% {
-      box-shadow: 0 0 15px rgba(255, 99, 71, 0.8), 0 0 25px rgba(255, 69, 0, 0.6);
-    }
-    50% {
-      box-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 40px rgba(255, 140, 0, 0.8);
-    }
-  }
-  
-  @keyframes flame4 {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(255, 69, 0, 0.9), 0 0 30px rgba(255, 140, 0, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 40px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.8);
-    }
-  }
+  width: 125px; /* Taille carrée */
+  height: 125px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  border-radius: 40px;
+  border: 5px solid transparent;
+  background-color: gold; /* Fond doré */
+  background-image: linear-gradient(black, gold), radial-gradient(circle, gold, black); /* Bordure dégradée or → noir */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Halo initial doré */
+  overflow: hidden;
+}
 
-  @keyframes flame5 {
-    0%, 100% {
-      box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.6);
-    }
-    50% {
-      box-shadow: 0 0 30px rgba(255, 99, 71, 1), 0 0 40px rgba(255, 69, 0, 0.9);
-    }
+/* Ajout des flammes (effet d'animation) */
+.flame::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 0.5), transparent);
+  border-radius: 50%; /* Effet de halo rond */
+  filter: blur(10px);
+  animation: flame-effect 3s infinite ease-in-out;
+  z-index: -1; /* Derrière le bouton */
+  box-shadow: 0 0 15px 5px rgba(255, 69, 0, 01);
+  overflow: hidden;
+}
+
+.soldier-canvas {
+  position: absolute; /* Position absolue pour superposer au contenu */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Place le canvas derrière les boutons */
+  pointer-events: none; /* Ignore les événements de clic */
+}
+
+
+/* Animations spécifiques */
+.flame1 {
+  animation: flame1 3s infinite ease-in-out;
+}
+
+.flame2 {
+  animation: flame2 4s infinite ease-in-out;
+}
+
+.flame3 {
+  animation: flame3 3.5s infinite ease-in-out;
+}
+
+.flame4 {
+  animation: flame4 5s infinite ease-in-out;
+}
+.flame5 {
+  animation: flame4 4.5s infinite ease-in-out;
+}
+.flame6 {
+  animation: flame4 3.5s infinite ease-in-out;
+}
+
+/* Définitions des animations */
+@keyframes flame1 {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.6);
   }
-  
-  @keyframes flame6 {
-    0%, 100% {
-      box-shadow: 0 0 25px rgba(255, 140, 0, 0.8), 0 0 35px rgba(255, 69, 0, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 35px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.9);
-    }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 99, 71, 1), 0 0 40px rgba(255, 69, 0, 0.9);
   }
+}
+
+@keyframes flame2 {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8), 0 0 35px rgba(255, 69, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+  }
+}
+
+@keyframes flame3 {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8), 0 0 25px rgba(255, 69, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 40px rgba(255, 140, 0, 0.8);
+  }
+}
+
+@keyframes flame4 {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.9), 0 0 30px rgba(255, 140, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.8);
+  }
+}
+
+@keyframes flame5 {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 99, 71, 1), 0 0 40px rgba(255, 69, 0, 0.9);
+  }
+}
+
+@keyframes flame6 {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.8), 0 0 35px rgba(255, 69, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+  }
+}

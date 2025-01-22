@@ -39,11 +39,11 @@ const App = () => {
       { text: "Ne faites pas vos radars aujourd'hui !!!", warning: true },
       {
         img: "img/tuesday/Capture d'écran 2025-01-13 102513.png",
-        text: "Effectuez 1 tâche secrète légendaire.",
+        text: "Effectuez vos tâches secrètes légendaire.",
       },
       {
         img: "img/tuesday/Capture d'écran 2025-01-13 102533.png",
-        text: "Envoyez un camion commercial légendaire.",
+        text: "Envoyez tous vos camions commerciaux en légendaire.",
       },
       {
         img: "img/tuesday/Capture d'écran 2025-01-13 102550.png",
@@ -110,7 +110,7 @@ const App = () => {
     friday: [
       {
         img: "img/monday/Capture d'écran 2025-01-13 084720.png",
-        text: "Faites vos tâches radars cumulées depuis jeudi matin (le stock en haut doit être plein lundi matin).",
+        text: "Faites vos tâches radars cumulées depuis jeudi matin (le stock en haut doit être plein vendredi matin).",
       },
       {
         img: "img/tuesday/Capture d'écran 2025-01-13 102611.png",

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./../styles/home.css";
 import Navbar from '../components/Navbar';
+import Soldier from '../components/Soldier';
 
 function Home() {
   // Définir les chemins et les labels pour chaque bouton
@@ -40,6 +41,9 @@ function Home() {
             </button>
           </Link>
         ))}
+      </div>
+      <div className="soldier-canvas">
+      <Soldier/>
       </div>
     </div>
   );
