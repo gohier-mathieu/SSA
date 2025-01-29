@@ -12,7 +12,6 @@
   z-index: 10;
 }
 
-/* Lorsque l'on est sur la page /home, centrer le logo */
 .navbar-logo.centered {
   position: absolute;
   left: 50%;
@@ -32,5 +31,5 @@
 }
 
 .navbar-cross:hover {
-  color: #ff0000; /* Couleur au survol */
+  color: #ff0000; 
 }

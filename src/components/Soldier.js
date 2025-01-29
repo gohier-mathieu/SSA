@@ -7,7 +7,7 @@ const Soldier = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current; // Référence du canvas
+    const canvas = canvasRef.current; 
     const scene = new THREE.Scene();
 
     // Dimensions
@@ -50,23 +50,20 @@ const Soldier = () => {
 
     // Chargement du modèle GLTF
     const loader = new GLTFLoader();
-    let mixer; // Déclarez le mixer en dehors du loader pour l'utiliser dans l'animation
+    let mixer;
 
     loader.load(
-        '/model/Character_Soldier.gltf', // Remplacez ce chemin par le chemin vers votre modèle
+        '/model/Character_Soldier.gltf',
         (gltf) => {
           console.log("Modèle chargé :", gltf);
           const model = gltf.scene;
           model.scale.set(0.2, 0.2, 0.2);
           scene.add(model);
       
-          // Créez un AnimationMixer pour jouer les animations
           mixer = new THREE.AnimationMixer(model);
       
-          // Log des animations disponibles
           console.log("Animations disponibles :", gltf.animations);
       
-          // Trouver l'animation "Walk" et l'ajouter au mixer
           const walkAnimation = gltf.animations.find(anim => anim.name === 'Walk'); // 'Walk' avec la majuscule
           if (walkAnimation) {
             console.log("Animation 'Walk' trouvée, démarrage...");
@@ -74,24 +71,23 @@ const Soldier = () => {
             console.error("Animation 'Walk' introuvable.");
           }
       
-          // Initialisation des variables pour le déplacement
-          let direction = 1; // 1 = droite, -1 = gauche
-          const speed = 0.005; // Vitesse du mouvement
+          let direction = 1;
+          const speed = 0.005; 
           const maxX = 1; 
           const minX = -2; 
       
-          // Positionner le soldat initialement à x: -2 avec rotation à 0° (regarde à gauche)
+          
           model.position.set(-2, -1.7, 0);
           model.rotation.y = Math.PI / 2; // Le soldat regarde à gauche initialement (rotation de 180°)
       
-          // Fonction pour démarrer l'animation de marche
+         
           const startWalkAnimation = () => {
             if (walkAnimation) {
               mixer.clipAction(walkAnimation).play();
             }
           };
       
-          // Lancer l'animation dès que tout est prêt
+         
           startWalkAnimation();
 
           const WEAPONS = [
@@ -112,13 +108,13 @@ const Soldier = () => {
           ];
           
           const changeWeapon = (weaponName) => {
-            // Vérifier si l'arme existe
+            
             if (!WEAPONS.includes(weaponName)) {
               console.error(`L'arme ${weaponName} n'existe pas dans la liste des armes disponibles`);
               return;
             }
           
-            // Première passe : cacher toutes les armes
+            
             model.traverse((child) => {
               WEAPONS.forEach(weapon => {
                 if (child.name && child.name.includes(weapon)) {
@@ -128,7 +124,7 @@ const Soldier = () => {
               });
             });
           
-            // Deuxième passe : montrer uniquement l'arme sélectionnée
+           
             model.traverse((child) => {
               if (child.name && child.name.includes(weaponName)) {
                 child.visible = true;
@@ -137,7 +133,7 @@ const Soldier = () => {
             });
           };
           
-          // Debug : afficher tous les noms des meshes pour vérifier
+          
           const debugMeshNames = () => {
             model.traverse((child) => {
               if (child.isMesh) {
@@ -146,10 +142,10 @@ const Soldier = () => {
             });
           };
           
-          // Appeler la fonction de debug pour voir les noms réels des meshes
+         
           debugMeshNames();
           
-          // Exemple d'utilisation
+          
           changeWeapon('AK');
       
           
@@ -163,38 +159,35 @@ const Soldier = () => {
             });
           };
     
-          changeColor('Body', 0x2c23aa); // Change la couleur du corps en vert
+          changeColor('Body', 0x2c23aa); 
       
-          // Animation
+          
           const tick = () => {
-            // Mettre à jour la position du modèle
             model.position.x += direction * speed;
       
-            // Vérifier si le modèle atteint les bornes (maxX ou minX)
             if (model.position.x >= maxX || model.position.x <= minX) {
-              direction *= -1; // Inverser la direction
+              direction *= -1; 
               
-              // Si on arrive à maxX (droite), faire demi-tour pour regarder vers la gauche
+          
               if (model.position.x >= maxX) {
-                model.rotation.y = -Math.PI / 2; // -90 degrés pour regarder vers la gauche
+                model.rotation.y = -Math.PI / 2;
               }
-              // Si on arrive à minX (gauche), faire demi-tour pour regarder vers la droite
+             
               else if (model.position.x <= minX) {
-                model.rotation.y = Math.PI / 2; // 90 degrés pour regarder vers la droite
+                model.rotation.y = Math.PI / 2;
               }
             }
       
-            // Mettez à jour le mixer d'animations à chaque frame
+          
             if (mixer) {
-              mixer.update(0.01); // Ajustez la valeur selon la vitesse de l'animation
+              mixer.update(0.01);
             }
       
             controls.update();
             renderer.render(scene, camera);
-            requestAnimationFrame(tick); // Continue d'appeler la fonction tick pour un cycle infini
+            requestAnimationFrame(tick); 
           };
       
-          // Lancer la fonction tick
           tick();
         },
         undefined,
@@ -204,9 +197,6 @@ const Soldier = () => {
       );
       
 
-      
-
-    // Gestion du redimensionnement
     const handleResize = () => {
       sizes.width = window.innerWidth;
       sizes.height = window.innerHeight;

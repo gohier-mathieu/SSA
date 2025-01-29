@@ -35,13 +35,13 @@ body {
     padding: 10px;
     font-size: 16px;
     width: 100%;
-    background: #424141; /* Couleur de fond du sélecteur */
-    border: 2px solid gold; /* Bordure dorée */
-    border-radius: 15px; /* Bordures arrondies */
-    color: white; /* Couleur du texte */
-    box-sizing: border-box; /* Assure une bonne gestion des dimensions */
-    outline: none; /* Supprime la bordure bleue par défaut lors du focus */
-    transition: border-color 0.3s ease; /* Transition pour un effet visuel */
+    background: #424141; 
+    border: 2px solid gold; 
+    border-radius: 15px; 
+    color: white; 
+    box-sizing: border-box; 
+    outline: none; 
+    transition: border-color 0.3s ease; 
   }
   
   #content {

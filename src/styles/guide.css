@@ -15,14 +15,14 @@
   }
   
   .article img:hover {
-    transform: scale(1.05); /* Zoom sur l'image au survol */
+    transform: scale(1.05); 
   }
   
   .article h3 {
-    font-size: 1.5rem; /* Taille du texte */
+    font-size: 1.5rem; 
     margin-bottom: 1rem;
     text-align: center;
-    max-width: 300px; /* La largeur maximale du texte correspond à celle de l'image */
-    word-wrap: break-word; /* Permet de couper les mots si nécessaire */
+    max-width: 300px;
+    word-wrap: break-word; 
   }
   

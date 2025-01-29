@@ -8,19 +8,17 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* Image au centre uniquement si on est sur la page home */}
       <Link to="/">
         <img
           src="/img/img/IMG_4590-removebg-preview.png"
           alt="Logo"
-          className={`navbar-logo ${isHome ? 'centered' : ''}`} // Ajout de la classe 'centered' si on est sur la page Home
+          className={`navbar-logo ${isHome ? 'centered' : ''}`} 
         />
       </Link>
 
-      {/* La croix s'affiche uniquement si on n'est pas sur / ou /home */}
       {!isHome && (
         <Link to="/home" className="navbar-cross">
-          &#10005; {/* La croix (X) */}
+          &#10005; 
         </Link>
       )}
     </nav>

@@ -9,6 +9,8 @@ import Landing from './pages/Landing';
 import Cascade from './pages/Cascade';
 import Guide from './pages/Guide';
 import Hero from './pages/Hero';
+import Event from './pages/Event';
+import Video from './pages/Video';
 
 function App() {
   return (
@@ -23,7 +25,8 @@ function App() {
         <Route path="/cascade" element={<Cascade />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/hero" element={<Hero />} />
-        {/* Redirection pour toute autre route vers landing */}
+        <Route path="/event" element={<Event/>} />
+        <Route path="/video" element={<Video/>} />
         <Route path="*" element={<Navigate to="/landing" />} />
       </Routes>
     </div>

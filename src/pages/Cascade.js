@@ -1,31 +1,31 @@
 import React from 'react';
-import Navbar from './../components/Navbar'; // Import de la barre de navigation
+import Navbar from './../components/Navbar';
 import './../styles/pillage.css';
 
 function Cascade() {
   return (
     <div>
-      {/* Affichage de la barre de navigation */}
+      
       <Navbar />
 
-      {/* Contenu principal de la page */}
+      
       <div
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          marginTop: '4rem', // Espace sous la navbar pour éviter un chevauchement
-          padding: '1rem', // Espacement interne pour un rendu agréable
-          maxWidth: '800px', // Limiter la largeur du contenu
-          margin: '4rem auto', // Centrer horizontalement le contenu
+          marginTop: '4rem', 
+          padding: '1rem',
+          maxWidth: '800px', 
+          margin: '4rem auto',
         }}
       >
-        {/* Titre */}
+        
         <h1 style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '1.5rem', color: 'gold'}}>
           La Cascade : Technique ultime pour augmenter vos puissances
         </h1>
 
-        {/* Image */}
+        
         <img
           src="img/divers/cascade.jpg"
           alt="La Cascade"
@@ -38,13 +38,13 @@ function Cascade() {
           }}
         />
 
-        {/* Texte explicatif */}
+       
         <p style={{ lineHeight: '1.6', textAlign: 'justify', marginBottom: '1rem', color:'white' }}>
           La cascade est <strong>LA technique ultime</strong> et simple pour augmenter <strong>RAPIDEMENT</strong> vos
           deux Puissances <strong>EN MÊME TEMPS</strong>. Le système est simple :
         </p>
 
-        {/* Liste des étapes */}
+       
         <ol style={{ lineHeight: '1.8', marginBottom: '1rem', paddingLeft: '1.5rem' , color:'white'}}>
           <li>
             <strong>On monte toujours notre Caserne #1</strong> à son niveau maximum (celui de notre QG).
@@ -82,7 +82,7 @@ function Cascade() {
           </li>
         </ol>
 
-        {/* Fin de l'explication */}
+        
         <p style={{ lineHeight: '1.6', textAlign: 'justify', marginBottom: '1rem' }}>
           Cette méthode vous permet de maximiser votre progression tout en économisant vos ressources.
         </p>

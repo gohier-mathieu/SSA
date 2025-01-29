@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 import Soldier from '../components/Soldier';
 
 function Home() {
-  // Définir les chemins et les labels pour chaque bouton
   const buttons = [
     { route: "/vs", label: "VS" },
     { route: "/pillage", label: "Pillage" },
@@ -13,6 +12,8 @@ function Home() {
     { route: "/cascade", label: "Cascade" },
     { route: "/Guide", label: "Guide pratique" },
     { route: "/hero", label: "Hero" },
+    { route: "/event", label: "Event" },
+    { route: "/video", label: "Video" },
   ];
 
   return (
@@ -25,7 +26,6 @@ function Home() {
         backgroundColor: 'black',
       }}
     >
-      {/* Affichage de la barre de navigation */}
       <Navbar />
       <div
         style={{

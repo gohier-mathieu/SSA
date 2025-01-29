@@ -7,20 +7,16 @@ const Landing = () => {
   const navigate = useNavigate();
 
   const handleEnterSite = () => {
-    // Naviguer vers home
     navigate('/home');
-    // Forcer le rafraîchissement après la navigation
     window.location.reload();
   };
 
   return (
     <div className="landing-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1 }}>
-      {/* Canvas pour l'arrière-plan */}
+      
       <div className="canvas-container" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
         <Canvas />
       </div>
-
-      {/* Bouton pour rediriger vers la page Home */}
       <div
         style={{
           position: 'absolute',

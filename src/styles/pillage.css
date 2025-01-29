@@ -7,22 +7,22 @@
   }
   
   .article img {
-    width: 350px; /* Largeur de l'image */
-    height: 600px; /* Hauteur de l'image */
+    width: 350px; 
+    height: 600px; 
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
   }
   
   .article img:hover {
-    transform: scale(1.05); /* Zoom sur l'image au survol */
+    transform: scale(1.05); 
   }
   
   .article h3 {
-    font-size: 1.5rem; /* Taille du texte */
+    font-size: 1.5rem; 
     margin-bottom: 1rem;
     text-align: center;
-    max-width: 300px; /* La largeur maximale du texte correspond à celle de l'image */
-    word-wrap: break-word; /* Permet de couper les mots si nécessaire */
+    max-width: 300px; 
+    word-wrap: break-word; 
   }
   

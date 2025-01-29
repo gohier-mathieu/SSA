@@ -1,9 +1,7 @@
 
 
-
-/* Styles de base des boutons */
 .flame {
-  width: 125px; /* Taille carrée */
+  width: 125px; 
   height: 125px;
   font-size: 16px;
   color: #fff;
@@ -11,15 +9,15 @@
   position: relative;
   border-radius: 40px;
   border: 5px solid transparent;
-  background-color: gold; /* Fond doré */
+  background-color: gold;
   background-image: linear-gradient(black, gold), radial-gradient(circle, gold, black); /* Bordure dégradée or → noir */
   background-origin: border-box;
   background-clip: content-box, border-box;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); /* Halo initial doré */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); 
   overflow: hidden;
 }
 
-/* Ajout des flammes (effet d'animation) */
+
 .flame::before {
   content: '';
   position: absolute;
@@ -28,26 +26,25 @@
   width: 140%;
   height: 140%;
   background: radial-gradient(circle, rgba(255, 165, 0, 0.8), rgba(255, 69, 0, 0.5), transparent);
-  border-radius: 50%; /* Effet de halo rond */
+  border-radius: 50%;
   filter: blur(10px);
   animation: flame-effect 3s infinite ease-in-out;
-  z-index: -1; /* Derrière le bouton */
+  z-index: -1; 
   box-shadow: 0 0 15px 5px rgba(255, 69, 0, 01);
   overflow: hidden;
 }
 
 .soldier-canvas {
-  position: absolute; /* Position absolue pour superposer au contenu */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Place le canvas derrière les boutons */
-  pointer-events: none; /* Ignore les événements de clic */
+  z-index: 1;
+  pointer-events: none;
 }
 
 
-/* Animations spécifiques */
 .flame1 {
   animation: flame1 3s infinite ease-in-out;
 }
@@ -69,8 +66,12 @@
 .flame6 {
   animation: flame4 3.5s infinite ease-in-out;
 }
-
-/* Définitions des animations */
+.flame7 {
+  animation: flame4 3s infinite ease-in-out;
+}
+.flame8 {
+  animation: flame4 5s infinite ease-in-out;
+}
 @keyframes flame1 {
   0%, 100% {
     box-shadow: 0 0 20px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 140, 0, 0.6);
@@ -122,5 +123,22 @@
   }
   50% {
     box-shadow: 0 0 35px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+  }
+}
+@keyframes flame7 {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8), 0 0 25px rgba(255, 69, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 69, 0, 1), 0 0 40px rgba(255, 140, 0, 0.8);
+  }
+}
+
+@keyframes flame8 {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.9), 0 0 30px rgba(255, 140, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 99, 71, 1), 0 0 50px rgba(255, 69, 0, 0.8);
   }
 }
