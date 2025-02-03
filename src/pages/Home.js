@@ -14,6 +14,7 @@ function Home() {
     { route: "/hero", label: "Hero" },
     { route: "/event", label: "Event" },
     { route: "/video", label: "Video" },
+    { route: "/gridMap", label: "GridMap" },
   ];
 
   return (
