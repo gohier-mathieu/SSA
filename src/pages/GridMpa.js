@@ -136,7 +136,7 @@ const GridMap = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container grid-map-container">
       <div className="search-container">
         <input
           type="text"
