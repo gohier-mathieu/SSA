@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="navbar">
       <Link to="/">
         <img
-          src="/img/img/IMG_4590-removebg-preview.png"
+          src="/img/img/LogoSSA7-removebg.png"
           alt="Logo"
           className={`navbar-logo ${isHome ? 'centered' : ''}`} 
         />

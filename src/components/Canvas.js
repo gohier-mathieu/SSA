@@ -132,7 +132,7 @@ const Canvas = () => {
       float pictureIntensity = texture2D(uPictureTexture, uv).r;
   
       // Calcul de la taille du point en fonction de la position et de la résolution
-      gl_PointSize = 0.15 * pictureIntensity * uResolution.y;
+      gl_PointSize = 0.08 * pictureIntensity * uResolution.y;
       gl_PointSize *= (1.0 / -viewPosition.z);
   
       // Transmission de la couleur au fragment shader
@@ -164,7 +164,7 @@ const Canvas = () => {
   }
   `;
   const pictureTexture = textureLoader.load(
-    '/img/img/IMG_4590-removebg-preview.png',
+    '/img/img/LogoSSA7-removebg.png',
     () => {
       // Le chargement de la texture a réussi, on peut ajouter les particules
       particlesMaterial.uniforms.uPictureTexture.value = pictureTexture;
@@ -184,7 +184,7 @@ const Canvas = () => {
             new THREE.Vector2(sizes.width * sizes.pixelRatio, sizes.height * sizes.pixelRatio)
           ),
           uPictureTexture: new THREE.Uniform(
-            textureLoader.load('./IMG_4590-removebg-preview.png')
+            textureLoader.load('./asyl.png')
           ),
           uDisplacementTexture: new THREE.Uniform(displacement.texture),
         },
