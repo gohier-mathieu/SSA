@@ -13,8 +13,8 @@ function Home() {
     { route: "/Guide", label: "Guide pratique" },
     { route: "/hero", label: "Hero" },
     { route: "/event", label: "Event" },
-    { route: "/video", label: "Video" },
-    /*{ route: "/gridMap", label: "GridMap" },*/
+    /*{ route: "/video", label: "Video" },*/
+    { route: "/gridMap", label: "GridMap" },
   ];
 
   return (
