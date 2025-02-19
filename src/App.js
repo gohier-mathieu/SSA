@@ -12,12 +12,13 @@ import Hero from './pages/Hero';
 import Event from './pages/Event';
 import Video from './pages/Video';
 import GridMap from './pages/GridMpa';
+import Bye from './pages/Bye';
 
 function App() {
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
       <Routes>
-        <Route path="/" element={<Navigate to="/landing" />} />
+        <Route path="/" element={<Navigate to="/bye" />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/vs" element={<Vs />} />
@@ -29,7 +30,8 @@ function App() {
         <Route path="/event" element={<Event/>} />
         <Route path="/video" element={<Video/>} />
         <Route path="/gridMap" element={<GridMap/>} />
-        <Route path="*" element={<Navigate to="/landing" />} />
+        <Route path="/bye" element={<Bye/>} />
+        <Route path="*" element={<Navigate to="/bye" />} />
       </Routes>
     </div>
   );
