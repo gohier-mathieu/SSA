@@ -19,7 +19,7 @@ function App() {
     <div style={{ position: 'relative', minHeight: '100vh' }}>
       <Routes>
         <Route path="/" element={<Navigate to="/bye" />} />
-        <Route path="/landing" element={<Landing />} />
+        <Route path="/start" element={<Landing />} />
         <Route path="/home" element={<Home />} />
         <Route path="/vs" element={<Vs />} />
         <Route path="/pillage" element={<Pillage />} />
