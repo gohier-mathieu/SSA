@@ -18,9 +18,9 @@ function App() {
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
       <Routes>
-        <Route path="/" element={<Navigate to="/bye" />} />
-        <Route path="/start" element={<Landing />} />
-        {/*<Route path="/home" element={<Home />} />
+        <Route path="/" element={<Navigate to="/landing" />} />
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/vs" element={<Vs />} />
         <Route path="/pillage" element={<Pillage />} />
         <Route path="/tpvs" element={<Tpvs />} />
@@ -29,9 +29,9 @@ function App() {
         <Route path="/hero" element={<Hero />} />
         <Route path="/event" element={<Event/>} />
         <Route path="/video" element={<Video/>} />
-        <Route path="/gridMap" element={<GridMap/>} />*/}
+        <Route path="/gridMap" element={<GridMap/>} />
         <Route path="/bye" element={<Bye/>} />
-        <Route path="*" element={<Navigate to="/bye" />} />
+        <Route path="*" element={<Navigate to="/landing" />} />
       </Routes>
     </div>
   );
