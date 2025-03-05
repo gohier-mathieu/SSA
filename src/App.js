@@ -12,7 +12,6 @@ import Hero from './pages/Hero';
 import Event from './pages/Event';
 import Video from './pages/Video';
 import GridMap from './pages/GridMpa';
-import Bye from './pages/Bye';
 
 function App() {
   return (
@@ -30,7 +29,6 @@ function App() {
         <Route path="/event" element={<Event/>} />
         <Route path="/video" element={<Video/>} />
         <Route path="/gridMap" element={<GridMap/>} />
-        <Route path="/bye" element={<Bye/>} />
         <Route path="*" element={<Navigate to="/landing" />} />
       </Routes>
     </div>
